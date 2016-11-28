@@ -1,0 +1,632 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<style type="text/css">
+/********************************* DEFAULT WIKI SETTINGS  ********************************/
+#top_menu_inside #bars_item{
+  position: absolute;
+  top: -30px !important;
+  left: -100px !important;
+  z-index: -1 !important;
+  cursor: pointer;
+}
+#sideMenu,
+#top_title {
+  display: none;
+}
+
+#content {
+  padding: 0px;
+  width: 100%;
+}
+
+body {
+  background-color: white;
+  width: 100%;
+}
+
+#bodyContent h1,
+#bodyContent h2,
+#bodyContent h3,
+#bodyContent h4,
+#bodyContent h5 {
+  margin-bottom: 0px;
+  border-bottom: none;
+}
+
+#bodyContent {
+  padding-right: 0px;
+}
+
+#globalWrapper {
+  padding: 0px;
+  margin: -10px -20px -20px -20px;
+  font
+}
+
+.navbar-collapse {
+  padding-left: 0px;
+}
+
+#banner {
+  margin-top: 50px;
+}
+
+#sideMenu {
+  margin-top: 10px;
+}
+
+.dropdown-menu li:hover .sub-menu {
+  visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-nav .dropdown-menu,
+.navbar .dropdown-menu {
+  margin-top: 0;
+}
+/********************************* CONTENT OF THE PAGE ********************************/
+@charset "UTF-8";
+@font-face {
+  font-family: Roboto;
+  src: url(http://2016.igem.org/wiki/images/0/05/T--SCU-China--Roboto-Light.ttf);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+.dropdown-submenu {
+  position: relative; }
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px; }
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block; }
+
+.dropdown-submenu:hover > a:after {
+  border-left-color: #fff; }
+
+.dropdown-submenu.pull-left {
+  float: none; }
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px; }
+
+.the-wiki-system-sucks {
+  position: fixed;
+  top: 0; }
+
+.the-wiki-system-sucks, .the-wiki-system-sucks * {
+  z-index: 1000;
+  font-family: Roboto, 微软雅黑;
+  font-weight: 300; }
+
+nav {
+  z-index: 1001 !important;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+  /* IE */
+  -moz-opacity: 0.85;
+  /* Moz + FF */ }
+
+nav img {
+  max-height: 100%; }
+
+img.button-pic {
+  float: left; }
+
+.bordered-btn {
+  padding: 6px 3px !important;
+  margin: 7px 12px !important;
+  border: 1px solid #777;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.active a {
+  background: transparent !important;
+  color: #4ebcb0 !important; }
+
+.section {
+  text-align: center;
+  color: #777; }
+
+.relative-frame {
+  position: relative; }
+
+.bear {
+  width: 360px; }
+
+.logo {
+  width: 100px;
+  /*display: block;
+  margin: auto;*/ }
+
+.intro {
+  max-width: 80%;
+  text-align: center;
+  margin: auto; }
+  .intro h1 {
+    color: black; }
+
+.arrow {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  margin-left: -27px;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out; }
+
+.transparent {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  /* IE */
+  -moz-opacity: 0;
+  /* Moz + FF */ }
+
+h1 {
+  font-size: 34px; }
+
+h2 {
+  font-size: 34px;
+  color: #4ebcb0; }
+
+.hr-black {
+  height: 1px;
+  background-color: #B5B5B5;
+  width: 33%;
+  margin: 0 auto; }
+
+.grey-bk {
+  background-color: #cecece; }
+
+.dark-bk {
+  background-color: #434343; }
+
+.text-container {
+  margin: auto 30px; }
+
+.s2-container {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  max-width: 80%;
+  margin: 100px auto auto auto;
+  text-align: left; }
+  .s2-container img {
+    display: inline-block; }
+  .s2-container .s2-text-container {
+    width: 40%; }
+  .s2-container .s2-gif {
+    width: 52%; }
+  .s2-container .s2-switch {
+    width: 8%; }
+
+.section h4 {
+  font-size: 26px;
+  color: black; }
+.section p {
+  font-size: 18px; }
+
+.s3-container {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  text-align: right;
+  max-width: 90%;
+  margin: auto;
+  margin: 100px auto auto auto; }
+  .s3-container img {
+    width: 50%; }
+  .s3-container .s3-text-container {
+    width: 35%; }
+
+.s4-container {
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px; }
+  .s4-container .s4-text-container {
+    width: 100%;
+    margin: auto !important; }
+  .s4-container > img {
+    width: 50%; }
+  .s4-container .s4-img-grp {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center; }
+    .s4-container .s4-img-grp > * {
+      width: 35%; }
+    .s4-container .s4-img-grp img {
+      max-width: 100%; }
+
+.s5-container {
+  width: 33%;
+  margin: auto;
+  margin: 150px auto auto auto; }
+  .s5-container img {
+    max-width: 100%; }
+  .s5-container .s5-text-container {
+    width: 80%; }
+
+.banner-container {
+  color: #d4d4d4;
+  max-width: 60%;
+  margin: auto; }
+  .banner-container .sponsor {
+    margin: 100px auto; }
+  .banner-container p {
+    font-size: 12px; }
+  .banner-container .contact {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    margin: 0; }
+</style>
+
+</style>
+    <link href="http://cdn.bootcss.com/fullPage.js/2.8.9/jquery.fullPage.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="the-wiki-system-sucks">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <img src="http://2016.igem.org/wiki/images/9/97/T--SCU-China--teamLogo.png" alt="team logo">
+            </a>
+            <a class="navbar-brand" href="#">
+              <img src="http://2016.igem.org/wiki/images/e/e1/T--SCU-China--subjectLogo.png" alt="team logo">
+            </a>
+          </div>
+          <div id="navbar" class="collapse navbar-collapse navbar-right">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="http://www.likearollingstone.name/">Home Page</a></li>
+              <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Project</a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-submenu">
+                  <a href="javascript:void(0)">Rihanna</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://www.likearollingstone.name/Rihanna.html#rOverview">Overview</a></li>
+                    <li><a href="http://www.likearollingstone.name/Rihanna.html#rC">CecropinXJ</a></li>
+                    <li><a href="http://www.likearollingstone.name/Rihanna.html#rL">Lysis</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="javascript:void(0)">Drake</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://www.likearollingstone.name/Drake.html#dOverview">Overview</a></li>
+                    <li><a href="http://www.likearollingstone.name/Drake.html#dA">Acetic Acid</a></li>
+                    <li><a href="http://www.likearollingstone.name/Drake.html#dL">Leucine</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
+                  <a href="javascript:void(0)">Enhancement</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://www.likearollingstone.name/Enhancement.html#eOverview">Overview</a></li>
+                    <li><a href="http://www.likearollingstone.name/Enhancement.html#eK">Knockout</a></li>
+                    <li><a href="http://www.likearollingstone.name/Description.html">VHb</a></li>
+                  </ul>
+                </li>
+                <li><a href="http://www.likearollingstone.name/Hardware.html">Hardware</a></li>
+                <li><a href="http://www.likearollingstone.name/Model.html">Modeling</a></li>
+              </ul>
+              </li>
+              <li><a href="http://www.likearollingstone.name/Parts.html">Parts</a></li>
+              <li><a href="http://www.likearollingstone.name/Collaborations.html">Collaboration</a></li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Human Practice</a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="dropdown-submenu">
+                    <a href="javascript:void(0)">Education</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.likearollingstone.name/HP/Silver.html#acma">ACMA</a></li>
+                      <li><a href="http://www.likearollingstone.name/HP/Silver.html#communityClass">Community Class</a></li>
+                      <li><a href="http://www.likearollingstone.name/HP/Silver.html#teachIn">Teach-in for Freshmen</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a href="#">Survey</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.likearollingstone.name/HP/Silver.html#inCampus">In Campus</a></li>
+                      <li><a href="http://www.likearollingstone.name/HP/Silver.html#inLongquan">In Longquan</a></li>
+                      <li><a href="http://www.likearollingstone.name/HP/Silver.html#nds">NDS</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a href="#">Meet Up</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="http://www.likearollingstone.name/HP/Silver.html#ingenuityLab">IngenuityLab_Canada</a></li>
+                      <li><a href="http://2016.igem.org/Community/Meetups/SouthWestChina">iSWU</a></li>
+                      <li><a href="http://www.likearollingstone.name/HP/Silver.html#ccic">CCiC</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="http://www.likearollingstone.name/HP/Gold.html">Integrated Human Practice</a></li>
+                </ul>
+              </li>
+              <li><a href="http://www.likearollingstone.name/Notebook.html">Notebook</a></li>
+              <li><a href="http://www.likearollingstone.name/Attributions.html">Team</a></li>
+              <li><a href="http://www.likearollingstone.name/Protocol.html">Protocol</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+
+      <div id="fullpage">
+        <div class="section">
+          <img src="http://2016.igem.org/wiki/images/9/95/T--SCU-China--i-bear.png" class="bear">
+          <h1>Look What They've Done</h1>
+          <h2>To My Shoes!</h2>
+          <div class="hr-black"></div>
+          <p>SCU_China Project 2016</p>
+          <img src="http://2016.igem.org/wiki/images/8/85/T--SCU-China--i-logo.png" class="logo">
+          <img src="http://2016.igem.org/wiki/images/4/45/T--SCU-China--i-arrow.png" class="arrow" id="arrow" onclick="arrowClick()">
+        </div>
+        <div class="section">
+          <div class="intro">
+            <h1>Background</h1>
+            <p>Foot odor and tinea pedis (athlete's foot) are such common foot diseases. Foot odor can always cause embarrassing trouble in public areas. And tinea pedis (athlete's foot) makes patient’s foot itching, scaling, and redness. A lot of people in Sichuan Province of China suffer from this, which is consistent with our human practice survey result.</p>
+            <p>Two problems are hard to treat because the diseases are caused by microorganisms. Foot odor is due to the metabolism result of microbiome on foot surface, acetic acid and isovaleric acid contribute most. Tinea pedis is a fungus infection disease, most commonly caused by Trichophyton rubrum, a fungi species originated from Southeast Asia (http://emedicine.medscape.com/article/1091684-overview). However, even though ointment has been developed to inhibit the growth of microorganisms living on our feet, the continuous inhibition ability is not good as expected. The shoes always provide perfect warm and mild environment for microorganisms to hide and revive at proper time on skin.</p>
+            <p>So SCU-China 2016 design an innovative insole “Comfootable” to deal with it. Two engineered strains E. coli, strain ”Rihanna” and strain “Drake” are living in the insole, to help us to achieve our goal: to inhibit the growth of microorganisms and remove the odor.</p>
+          </div>
+        </div>
+        <div class="section grey-bk">
+          <div class="s2-container">
+            <div class="text-container s2-text-container">
+              <h4>Engeneered E.coli Strain</h4>
+              <h4>"Rihanna"</h4>
+              <p>You can stand on my umbrella to ANTI microorganisms.</p>
+              <p>Antimicrobial peptide CecropinXJ is synthesizing in “Rih……...anna” anytime. When your foot is on the insole, the temperature of your foot induces the temperature sensitive promoter to drive the expression of self-kill gene hokD to lyse the “Rihanna” to release CecropinXJ.</p>
+              <p>Visit Project “Rihanna” for more.</p>
+            </div>
+            <img src="img/2c-ini.png" class="s2-gif">
+            <img src="img/c.png" onclick="temSwitch(this);" class="s2-switch">
+          </div>
+        </div>
+        <div class="section">
+          <div class="s3-container">
+            <img src="img/3-ini.png" class="s3-gif">
+            <div class="text-container s3-text-container">
+              <h4>Engeneered E.coli Strain</h4>
+              <h4>"Drake"</h4>
+              <p>Work, work, work, work, you see me I be work with “Rihanna”.</p>
+              <p>Yes, the insole is “Rihanna” featuring “Drake”. Strain “Drake” includes gene aarC to covert acetic acid into TCA cycle. It also competitively utilizes leucine to prevent the production of isovaleric acid in shoes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="s4-container">
+            <div class="s4-img-grp">
+              <div class="s4-img-grp-left">
+                <img src="img/30-last.png" class="r30-last">
+                <img src="img/37-last.png" class="r37-last">
+              </div>
+              <img src="img/drake-last.png" class="drake-last">
+            </div>
+            <div class="text-container s4-text-container">
+              <h4>E.coli Enhancement</h4>
+              <p>E. coli odor itself is not that pleasant as well. We use RED to knockout the insole production gene tnaA (tryptophanase) to reduce the odor itself. Insole in shoes is not a wonderful home for microorganisms to grow. We use vitreoscilla hemoglobin (existing part K1321200) to enhance the grow ability of two E. coli strains and get the quantitative measurement result of the Biobrick.</p>
+            </div>
+            <img src="img/4-ini.png" class="s4-gif">
+          </div>
+        </div>
+        <div class="section grey-bk">
+          <div class="s5-container">
+            <img src="img/confootable.png">
+            <div class="text-container s5-text-container">
+              <h4>Comfootable</h4>
+              <p>Hydrogen gel + 3D printing provide house for microorganisms to live in. Hydrogen gel has a good ability for making sure the mass transfer, mechanical strength and biocompatibility for E. coli. Guess what, it only cost $3 each insole.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section dark-bk fp-auto-height">
+          <div class="banner-container">
+            <h3 class="sponsor">@SCU_China</h3>
+            <h3 class="contact">联系我们</h3>
+          </div>
+        </div>
+      </div><!-- /.container -->
+    </div>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script>
+(function () {
+  'use strict';
+
+  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+    var msViewportStyle = document.createElement('style')
+    msViewportStyle.appendChild(
+      document.createTextNode(
+        '@-ms-viewport{width:auto!important}'
+      )
+    )
+    document.querySelector('head').appendChild(msViewportStyle)
+  }
+
+})();
+</script>
+    <script src="http://cdn.bootcss.com/fullPage.js/2.8.9/vendors/scrolloverflow.min.js"></script>
+    <script src="http://cdn.bootcss.com/fullPage.js/2.8.9/jquery.fullPage.min.js"></script>
+<script>
+var tem = 'h';
+var prev = 0;
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+        //sectionsColor: ['white', '#cecece', 'white', '#cecece', 'white', '#434343'],
+        //anchors:['s1', 's2', 's3', 's4', 's5', 's6'],
+        afterLoad: function(anchorLink, index)
+        {
+            stop(prev);
+            play(index);
+        },
+
+        onLeave: function(index, nextIndex, direction)
+        {
+            prev = index;
+        }
+    });
+    $(".dropdown-submenu")
+        .mouseenter(function() {
+            $(this).parent('li').addClass('active');
+        })
+        .mouseleave(function() {
+        $(this).parent('li').removeClass('active');
+    });
+});
+
+var imgUrlPrefix = 'img/';
+var img = ['', '']
+function play(index)
+{
+    if(index > 2 && index < 6)
+    {
+        var imgUrl = imgUrlPrefix + (index-1) + (index==3?tem:'') + '.gif';
+        $('.s' + (index-1) + '-gif').attr('src', imgUrl);
+    }
+}
+
+function stop(index)
+{
+    if(index > 2 && index < 6)
+    {
+        var imgUrl = imgUrlPrefix + (index-1) + (index==3?tem:'') + '-ini.png';
+        $('.s' + (index-1) + '-gif').attr('src', imgUrl);
+    }
+}
+
+temSwitch($('.s2-switch'));
+stop(3);
+stop(4);
+stop(5);
+
+function temSwitch(obj)
+{
+    tem = tem == 'c' ? 'h' : 'c';
+    $(obj).attr('src', imgUrlPrefix + tem + '.png');
+    play(3);
+}
+
+
+var pt = 0;
+var cls = ['arrow', 'arrow transparent']
+setInterval(function(){$('#arrow').attr('class', cls[pt = (pt+1)%2]);}, 1000);
+
+function arrowClick()
+{
+    $.fn.fullpage.moveSectionDown();
+}
+
+$('nav').css('top', $('#top_menu_14').innerHeight() + 'px');
+</script>
+
+<script type="text/javascript">
+  (function () {
+  'use strict';
+
+  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+    var msViewportStyle = document.createElement('style')
+    msViewportStyle.appendChild(
+      document.createTextNode(
+        '@-ms-viewport{width:auto!important}'
+      )
+    )
+    document.querySelector('head').appendChild(msViewportStyle)
+  }
+
+})();
+
+// This is the jquery part of your template.  Try not modify any of this code since it makes your menu work.
+
+  $(document).ready(function() {
+
+    $("#HQ_page").attr('id','');
+
+
+    if ( wgPageName.substring( 0,  8) == "Template")  {   // if the page is a template it displays the full name in a single line
+      $("#team_name").html( wgPageName );
+    }
+
+    else if (  ( (wgPageName.match(/\//g) || []).length ) == 0 ) {  // if it is the home page , just print the team's name
+      $("#team_name").html( wgPageName.substring( 5, wgPageName.length ) );
+    }
+
+    else {
+       // this adds the team's name as an h1
+      $("#team_name").html( wgPageName.substring( 5 , wgPageName.indexOf("/")  ) );
+
+      // this adds the page's title as an h4
+      $("#page_name").html (     ( wgPageName.substring( wgPageName.indexOf("/") + 1, wgPageName.length ) ).replace( /\/|_/g , " ")  );
+    }
+
+    $('#accordion').find('.menu_item').click(function(){
+
+       //Expand or collapse this panel
+      submenu = $(this).find('.submenu');
+      submenu.toggle();
+
+      icon = $(this).find('.icon');
+
+      if ( !$( submenu ).is(':visible') ) {
+        icon.removeClass("less").addClass("plus");
+      }
+      else {
+        icon.removeClass("plus").addClass("less");
+      }
+
+      //Hide the other panels
+      $(".submenu").not(submenu).hide();
+      $(".icon").not(icon).removeClass("less").addClass("plus");
+    });
+
+
+    $(".collapsable_menu_control").click(function() {
+      $(".menu_item").toggle();
+    });
+
+    $( window ).resize(function() {
+      $(".menu_item").show();
+    });
+  });
+</script>
+  </body>
+</html>

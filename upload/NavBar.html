@@ -1,0 +1,431 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  (function () {
+  'use strict';
+
+  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+    var msViewportStyle = document.createElement('style')
+    msViewportStyle.appendChild(
+      document.createTextNode(
+        '@-ms-viewport{width:auto!important}'
+      )
+    )
+    document.querySelector('head').appendChild(msViewportStyle)
+  }
+
+})();
+
+// This is the jquery part of your template.  Try not modify any of this code since it makes your menu work.
+
+  $(document).ready(function() {
+
+    $("#HQ_page").attr('id','');
+
+
+    if ( wgPageName.substring( 0,  8) == "Template")  {   // if the page is a template it displays the full name in a single line
+      $("#team_name").html( wgPageName );
+    }
+
+    else if (  ( (wgPageName.match(/\//g) || []).length ) == 0 ) {  // if it is the home page , just print the team's name
+      $("#team_name").html( wgPageName.substring( 5, wgPageName.length ) );
+    }
+
+    else {
+       // this adds the team's name as an h1
+      $("#team_name").html( wgPageName.substring( 5 , wgPageName.indexOf("/")  ) );
+
+      // this adds the page's title as an h4
+      $("#page_name").html (     ( wgPageName.substring( wgPageName.indexOf("/") + 1, wgPageName.length ) ).replace( /\/|_/g , " ")  );
+    }
+
+
+
+
+    $('#accordion').find('.menu_item').click(function(){
+
+       //Expand or collapse this panel
+      submenu = $(this).find('.submenu');
+      submenu.toggle();
+
+      icon = $(this).find('.icon');
+
+      if ( !$( submenu ).is(':visible') ) {
+        icon.removeClass("less").addClass("plus");
+      }
+      else {
+        icon.removeClass("plus").addClass("less");
+      }
+
+      //Hide the other panels
+      $(".submenu").not(submenu).hide();
+      $(".icon").not(icon).removeClass("less").addClass("plus");
+    });
+
+
+    $(".collapsable_menu_control").click(function() {
+      $(".menu_item").toggle();
+    });
+
+    $( window ).resize(function() {
+      $(".menu_item").show();
+    });
+
+
+  });
+
+</script>
+
+<style type="text/css">
+/********************************* DEFAULT WIKI SETTINGS  ********************************/
+#top_menu_inside #bars_item{
+  position: absolute;
+  top: -30px !important;
+  left: -100px !important;
+  z-index: -1 !important;
+  cursor: pointer;
+}
+#sideMenu,
+#top_title {
+  display: none;
+}
+
+#content {
+  padding: 0px;
+  width: 100%;
+}
+
+body {
+  background-color: white;
+  width: 100%;
+}
+#bodyContent h1{
+  font-weight: 300 !important;
+}
+#bodyContent h1,
+#bodyContent h2,
+#bodyContent h3,
+#bodyContent h4,
+#bodyContent h5 {
+  margin-bottom: 0px;
+  border-bottom: none;
+}
+
+#bodyContent {
+  padding-right: 0px;
+}
+
+#globalWrapper {
+  font-size: 100%;
+  padding: 0px;
+  margin: -10px -20px -20px -20px;
+}
+
+.navbar-collapse {
+  padding-left: 0px;
+}
+
+#banner {
+  margin-top: 50px;
+}
+
+#sideMenu {
+  margin-top: 10px;
+}
+
+.navbar-nav .dropdown-menu,
+.navbar .dropdown-menu {
+  margin-top: 0;
+}
+/********************************* CONTENT OF THE PAGE ********************************/
+.navbar{
+  top: 16px;
+}
+@charset "UTF-8";
+@font-face {
+  font-family: Roboto;
+  src: url(http://2016.igem.org/wiki/images/0/05/T--SCU-China--Roboto-Light.ttf);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+.dropdown-submenu {
+  position: relative; }
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px; }
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block; }
+
+.dropdown-submenu:hover > a:after {
+  border-left-color: #fff; }
+
+.dropdown-submenu.pull-left {
+  float: none; }
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px; }
+
+body {
+  line-height: 1.42857143 !important;
+  background-color: white;
+  font-family: Roboto, 微软雅黑;
+  font-weight: 300;
+}
+
+
+
+nav {
+  /*z-index: 1030 !important;*/
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0.85;
+  filter: alpha(opacity=80);
+  /* IE */
+  -moz-opacity: 0.80;
+  /* Moz + FF */ }
+
+nav img {
+  max-height: 100%; }
+
+img.button-pic {
+  float: left; }
+
+.bordered-btn {
+  padding: 6px 3px !important;
+  margin: 7px 12px !important;
+  border: 1px solid #777;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.active > a {
+  background: transparent !important;
+  color: #4ebcb0 !important; }
+
+.transparent {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  /* IE */
+  -moz-opacity: 0;
+  /* Moz + FF */ }
+
+.hr-black {
+  height: 1px;
+  background-color: #B5B5B5;
+  margin: 0 auto; }
+
+.aqua-bk {
+  background-color: #4ebcb0;
+  color: white; }
+
+.content {
+  width: 100%;
+  padding: 0;
+  }
+  .content > * > * {
+    max-width: 70%; }
+  .content h1, .content p {
+    margin: 0 auto; }
+  .content .center {
+    text-align: center; }
+  .content h1 {
+    padding: 0; }
+  .content h2 {
+    margin-top: 40px; }
+  .content strong {
+    font-weight: 700 !important; }
+  .content p {
+    font-size: 1.3em;
+    padding: 0;
+    margin: 10px 0; }
+  .content blockquote > p {
+    font-size: 1em; }
+  .content .content-block {
+    padding-top: 84px;
+    padding-bottom: 0;
+    /*padding-bottom: $contentPaddingBottom;*/
+    margin: auto; }
+  .content .padding-bottom {
+    padding-bottom: 84px; }
+
+.project .figure {
+  margin: auto;
+  text-align: center; }
+  .project .figure > * {
+    margin: auto; }
+  .project .figure > img {
+    max-width: 80%;
+    margin: 10px auto; }
+  .project .figure > p {
+    max-width: 60%;
+    margin-bottom: 40px; }
+
+video {
+  max-width: 100%; }
+
+.team .row {
+  padding-top: 1.5em; }
+.team .individual .portrait {
+  position: relative; }
+  .team .individual .portrait > p {
+    position: absolute;
+    top: 0;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: .85em;
+    color: white;
+    z-index: 1003;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    line-height: 1.07em; }
+  .team .individual .portrait > p::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    /* IE */
+    -moz-opacity: 0.7;
+    /* Moz + FF */
+    z-index: -1;
+    background-color: black; }
+.team .individual img {
+  max-width: 100%; }
+.team .individual h5 {
+  margin: 0;
+  background-color: #4ebcb0;
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 15px 0; }
+.team .individual .triangle {
+  height: 0;
+  width: 0;
+  border: 10px solid #4ebcb0;
+  border-color: #4ebcb0 transparent transparent transparent;
+  margin: 0 auto; }
+.team .individual h6 {
+  margin: 0 auto;
+  /*padding-top: $namePaddingTop;*/
+  padding: 0;
+  text-align: center;
+  font-size: 1.3em; }
+.team .individual > p {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1em; }
+    </style>
+  </head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="http://2016.igem.org/wiki/images/9/97/T--SCU-China--teamLogo.png" alt="team logo">
+        </a>
+        <a class="navbar-brand" href="#">
+          <img src="http://2016.igem.org/wiki/images/e/e1/T--SCU-China--subjectLogo.png" alt="team logo">
+        </a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li class="list1 active"><a href="http://2016.igem.org/Team:SCU-China">Home Page</a></li>
+          <li class="list2 dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Project</a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="dropdown-submenu">
+              <a href="javascript:void(0)">Rihanna</a>
+              <ul class="dropdown-menu">
+                <li><a href="http://2016.igem.org/Team:SCU-China/Rihanna#rOverview">Overview</a></li>
+                <li><a href="http://2016.igem.org/Team:SCU-China/Rihanna#rC">CecropinXJ</a></li>
+                <li><a href="http://2016.igem.org/Team:SCU-China/Rihanna#rL">Lysis</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="javascript:void(0)">Drake</a>
+              <ul class="dropdown-menu">
+                <li><a href="http://2016.igem.org/Team:SCU-China/Drake#dOverview">Overview</a></li>
+                <li><a href="http://2016.igem.org/Team:SCU-China/Drake#dA">Acetic Acid</a></li>
+                <li><a href="http://2016.igem.org/Team:SCU-China/Drake#dL">Leucine</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="javascript:void(0)">Enhancement</a>
+              <ul class="dropdown-menu">
+                <li><a href="http://2016.igem.org/Team:SCU-China/Enhancement#eOverview">Overview</a></li>
+                <li><a href="http://2016.igem.org/Team:SCU-China/Enhancement#eK">Knockout</a></li>
+                <li><a href="http://2016.igem.org/Team:SCU-China/Description">VHb</a></li>
+              </ul>
+            </li>
+            <li><a href="http://2016.igem.org/Team:SCU-China/Hardware">Hardware</a></li>
+            <li><a href="http://2016.igem.org/Team:SCU-China/Model">Modeling</a></li>
+          </ul>
+          </li>
+          <li class="list3"><a href="http://2016.igem.org/Team:SCU-China/Parts">Parts</a></li>
+          <li class="list4"><a href="http://2016.igem.org/Team:SCU-China/Collaborations">Collaboration</a></li>
+          <li class="list5 dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Human Practice</a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="dropdown-submenu">
+                <a href="javascript:void(0)">Education</a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://2016.igem.org/Team:SCU-China/HP/Silver#acma">ACMA</a></li>
+                  <li><a href="http://2016.igem.org/Team:SCU-China/HP/Silver#communityClass">Community Class</a></li>
+                  <li><a href="http://2016.igem.org/Team:SCU-China/HP/Silver#teachIn">Teach-in for Freshmen</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="#">Survey</a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://2016.igem.org/Team:SCU-China/HP/Silver#inCampus">In Campus</a></li>
+                  <li><a href="http://2016.igem.org/Team:SCU-China/HP/Silver#inLongquan">In Longquan</a></li>
+                  <li><a href="http://2016.igem.org/Team:SCU-China/HP/Silver#nds">NDS</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="#">Meet Up</a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://2016.igem.org/Team:SCU-China/HP/Silver#ingenuityLab">IngenuityLab_Canada</a></li>
+                  <li><a href="http://2016.igem.org/Community/Meetups/SouthWestChina">iSWU</a></li>
+                  <li><a href="http://2016.igem.org/Team:SCU-China/HP/Silver#ccic">CCiC</a></li>
+                </ul>
+              </li>
+              <li><a href="http://2016.igem.org/Team:SCU-China/HP/Gold">Integrated Human Practice</a></li>
+            </ul>
+          </li>
+          <li class="list6"><a href="http://2016.igem.org/Team:SCU-China/Notebook">Notebook</a></li>
+          <li class="list7"><a href="http://2016.igem.org/Team:SCU-China/Attributions">Team</a></li>
+          <li class="list8"><a href="http://2016.igem.org/Team:SCU-China/Protocol">Protocol</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  </body>
+</html>
+

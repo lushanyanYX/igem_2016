@@ -1,0 +1,223 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Roboto;
+  src: url(/fonts/Roboto-Light.ttf);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+.dropdown-submenu {
+  position: relative; }
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px; }
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block; }
+
+.dropdown-submenu:hover > a:after {
+  border-left-color: #fff; }
+
+.dropdown-submenu.pull-left {
+  float: none; }
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px; }
+
+.the-wiki-system-sucks {
+  position: fixed;
+  top: 0; }
+
+.the-wiki-system-sucks, .the-wiki-system-sucks * {
+  z-index: 1000;
+  font-family: Roboto, 微软雅黑;
+  font-weight: 300; }
+
+nav {
+  z-index: 1001 !important;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+  /* IE */
+  -moz-opacity: 0.85;
+  /* Moz + FF */ }
+
+nav img {
+  max-height: 100%; }
+
+img.button-pic {
+  float: left; }
+
+.bordered-btn {
+  padding: 6px 3px !important;
+  margin: 7px 12px !important;
+  border: 1px solid #777;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+.active a {
+  background: transparent !important;
+  color: #4ebcb0 !important; }
+
+.section {
+  text-align: center;
+  color: #777; }
+
+.relative-frame {
+  position: relative; }
+
+.bear {
+  width: 360px; }
+
+.logo {
+  width: 100px;
+  /*display: block;
+  margin: auto;*/ }
+
+.intro {
+  max-width: 80%;
+  text-align: center;
+  margin: auto; }
+  .intro h1 {
+    color: black; }
+
+.arrow {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  margin-left: -27px;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out; }
+
+.transparent {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  /* IE */
+  -moz-opacity: 0;
+  /* Moz + FF */ }
+
+h1 {
+  font-size: 34px; }
+
+h2 {
+  font-size: 34px;
+  color: #4ebcb0; }
+
+.hr-black {
+  height: 1px;
+  background-color: #B5B5B5;
+  width: 33%;
+  margin: 0 auto; }
+
+.grey-bk {
+  background-color: #cecece; }
+
+.dark-bk {
+  background-color: #434343; }
+
+.text-container {
+  margin: auto 30px; }
+
+.s2-container {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  max-width: 80%;
+  margin: 100px auto auto auto;
+  text-align: left; }
+  .s2-container img {
+    display: inline-block; }
+  .s2-container .s2-text-container {
+    width: 40%; }
+  .s2-container .s2-gif {
+    width: 52%; }
+  .s2-container .s2-switch {
+    width: 8%; }
+
+.section h4 {
+  font-size: 26px;
+  color: black; }
+.section p {
+  font-size: 18px; }
+
+.s3-container {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: flex-start;
+  -webkit-align-items: flex-start;
+  text-align: right;
+  max-width: 90%;
+  margin: auto;
+  margin: 100px auto auto auto; }
+  .s3-container img {
+    width: 50%; }
+  .s3-container .s3-text-container {
+    width: 35%; }
+
+.s4-container {
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px; }
+  .s4-container .s4-text-container {
+    width: 100%;
+    margin: auto !important; }
+  .s4-container > img {
+    width: 50%; }
+  .s4-container .s4-img-grp {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center; }
+    .s4-container .s4-img-grp > * {
+      width: 35%; }
+    .s4-container .s4-img-grp img {
+      max-width: 100%; }
+
+.s5-container {
+  width: 33%;
+  margin: auto;
+  margin: 150px auto auto auto; }
+  .s5-container img {
+    max-width: 100%; }
+  .s5-container .s5-text-container {
+    width: 80%; }
+
+.banner-container {
+  color: #d4d4d4;
+  max-width: 60%;
+  margin: auto; }
+  .banner-container .sponsor {
+    margin: 100px auto; }
+  .banner-container p {
+    font-size: 12px; }
+  .banner-container .contact {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    margin: 0; }
+
+/*# sourceMappingURL=wiki-style.css.map */

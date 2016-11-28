@@ -1,0 +1,41 @@
+﻿{{:Team:SCU-China/NavBar}}
+
+Team
+http://2016.igem.org/Team:SCU-China/Attributions
+
+Collaboration
+http://2016.igem.org/Team:SCU-China/Collaborations
+
+Human Practice
+http://2016.igem.org/Team:SCU-China/HP/Silver
+
+Human Practice-Integrated Human Practice
+http://2016.igem.org/Team:SCU-China/HP/Gold
+
+VHb
+http://2016.igem.org/Team:SCU-China/Description
+
+Model
+http://2016.igem.org/Team:SCU-China/Model
+
+VHb
+重定位到http://2016.igem.org/Team:SCU-China/Measurement
+
+还不知道
+http://2016.igem.org/Team:SCU-China/Proof
+
+Hardware
+http://2016.igem.org/Team:SCU-China/Hardware
+
+Home Page
+重定位到http://2016.igem.org/Team:SCU-China/Design
+
+Collaboration
+重定位到 http://2016.igem.org/Team:SCU-China/Entrepreneurship
+
+这些是官方对url有要求的部分，没有要求的页面直接用文件夹名字就可以
+Project-Rihanna-Overview、Project-Rihanna-CecropinXJ、Project-Rihanna-Lysis链接到同一个页面，但定位到不同位置。比如Lysis，点击后跳转到Rihanna页面Lysis小标题处。Drake和Enhancement同理。HumanPractice前三个二级菜单同理（链接为http://2016.igem.org/Team:SCU-China/HP/Silver），最后一个（Integrated Human Practice）到新网页http://2016.igem.org/Team:SCU-China/HP/Gold。
+
+不知道重定向能不能成功，不行的话就在要求的url下做一个页面，然后写“点这里看哦”一类的话，超链接到上面标的对应页面。
+
+还有什么我没说清楚的戳我厚
